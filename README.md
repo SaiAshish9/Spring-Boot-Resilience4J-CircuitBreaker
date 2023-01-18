@@ -35,3 +35,7 @@ When the number of failures exceeds the threshold, circuit breaker will be in a 
 
 After the timeout, it returns back to HALF_OPEN , of it succedds its sent to the CLOSED state otherwise OPEN
 ```
+
+```
+Once the server is down OPEN, we need to hit api permittedNumberOfCallsInHalfOpenState no. of time when its up again to convert status into CLOSED. STATUS will be HALF_OPEN in between
+```
