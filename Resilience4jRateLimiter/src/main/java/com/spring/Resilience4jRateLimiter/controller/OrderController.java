@@ -16,6 +16,11 @@ public class OrderController {
     @Autowired
     private RestTemplate restTemplate;
 
+    @Bean
+    public RestTemplate getRestTemplate() {
+        return new RestTemplate();
+    }
+
     @GetMapping("/order")
     @CircuitBreaker(name=ORDER_SERVICE, fallbackMethod = "orderFallback")
     public ResponseEntity<String> createOrder(){
