@@ -9,3 +9,9 @@ rps*
 ```
 
 <img width="773" alt="Screenshot 2023-01-18 at 11 41 58 PM" src="https://user-images.githubusercontent.com/43849911/213261092-8bbd8fbc-1825-4ef5-8bab-1a17b17f01ea.png">
+
+```
+For server side rate limiting, we might need to deal with caching and coordination b/w multiple server instances which might not be supported.
+```
+
+<img width="974" alt="Screenshot 2023-01-19 at 12 11 57 AM" src="https://user-images.githubusercontent.com/43849911/213266908-33d5fa04-0201-4e51-957b-628112048dc1.png">
