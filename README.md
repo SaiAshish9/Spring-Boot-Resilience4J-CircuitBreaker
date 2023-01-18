@@ -26,3 +26,12 @@ For server side rate limiting, we might need to deal with caching and coordinati
 Circuit Breaker
 ```
 <img width="573" alt="Screenshot 2023-01-19 at 2 54 45 AM" src="https://user-images.githubusercontent.com/43849911/213298149-bd9293ab-0dbf-4780-a696-f983d6037e40.png">
+
+
+```
+When everything is normal circuit breaker remains in closed state and all the calls passes through these services.
+
+When the number of failures exceeds the threshold, circuit breaker will be in a open state and returns message without executing anything in the fn. 
+
+After the timeout, it returns back to HALF_OPEN , of it succedds its sent to the CLOSED state otherwise OPEN
+```
